@@ -1,0 +1,22 @@
+<div class="col">
+    <div class="row">
+        <input #termino (keyup.enter)="buscar(termino.value)" type="text" placeholder="Buscar artista" class="form-control">
+    </div>
+    <!-- <div class="row mt-5">
+        <div class="card mb-5" style="max-width: 540px;">
+            <div *ngFor="let artista of artistas" class="row no-gutters">
+                <div class="col-md-4">
+                    <img [src]="artista.images | noImage" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ artista.name }}</h5>
+                        <span class="badge badge-pill badge-success">{{ artista.genres }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</div>
+<app-loading *ngIf="loading"></app-loading>
+<app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas>
